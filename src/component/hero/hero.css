@@ -1,0 +1,110 @@
+/* Base styles for all devices */
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    background-color: rgb(23, 23, 23);
+}
+
+.hero-one, .hero-two, .hero-three {
+    color: white;
+}
+
+.hero-one {
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%;
+    text-align: center;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.hero-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.hero-three {
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-three img {
+    width: 100%;
+    max-width: 300px; /* Ensure image doesn’t exceed 300px width */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Styles specific to larger screens */
+@media (min-width: 768px) {
+    .hero-container {
+        height: 600px;
+    }
+
+    .hero-one {
+        width: 15%;
+    }
+
+    .hero-two {
+        width: 30%;
+    }
+
+    .hero-three {
+        width: 50%;
+    }
+
+    .hero-three img {
+        margin-top: 150px;
+        margin-left: 200px;
+    }
+
+    .hero-text h1 {
+        text-align: left;
+    }
+
+    .bachahoa {
+        height: 100px;
+    }
+}
+
+/* Styles specific to smaller screens */
+@media (max-width: 767px) {
+    .hero-one, .hero-two, .hero-three {
+        width: 100%;
+    }
+
+    .hero-three img {
+        margin: 20px; /* Reduce margins on smaller screens */
+        width: 80%; /* Make the image responsive */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    .hero-text h1 {
+        text-align: center;
+    }
+
+    .bachahoa {
+        height: 60px; /* Adjust height for smaller screens */
+    }
+}
+
+.hero-text button {
+    background-color: rgb(234, 179, 8);
+    font-weight: 600;
+    height: 42px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.hello {
+    color: rgb(234, 179, 8);
+}
