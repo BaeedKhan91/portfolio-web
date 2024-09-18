@@ -1,15 +1,13 @@
 import React from 'react'
 import Nav from './../component/navbar/nav'
-import Hero from './../component/hero/hero'
-// import './kc.css'
-
-const home = () => {
+import './kc.css'
+const contact = () => {
   return (
     <>
     {/* <Nav/> */}
-    <Hero/>
+    <div>contact</div>
     </>
   )
 }
 
-export default home
+export default contact

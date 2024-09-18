@@ -1,29 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useState}from 'react'
+import { NavLink, } from 'react-router-dom'
 import './nav.css'
 function nav  ()  {
+    const [navItems,setNavItems] =useState(false);
   return (
     <>
-    <div className="nav-container">
+    <div className="nav-container mobile-link">
         <div className="one">
            <p>About me</p>
         </div>
         <div className="two"></div>
-        <div className="three">
-        <div className="nav-items home">
-            <a href="">Home</a>
+        <div className={navItems ? "mobile-link row-link" :"three nav-items"}>
+        <div className=" home ho">
+            <NavLink to="/">Home</NavLink>
+            {/* <a href="">Home</a> */}
             </div>
-        <div className="nav-items service" >
-        <a href="">Service</a>
+        <div className=" service ho" >
+            <NavLink to="/service">Service</NavLink>
+        {/* <a href="">Service</a> */}
             </div>
-        <div className="nav-items education">
-        <a href="">Education</a>
+        <div className=" education ho">
+            <NavLink to="/eduaction">Education</NavLink>
+        {/* <a href="">Education</a> */}
             </div>
-        <div className="nav-items about">
-        <a href="">About</a>
+        <div className=" about ho">
+            <NavLink to="/contact">Contact</NavLink>
+        {/* <a href="">About</a> */}
             </div>
         </div>
+        <div className="nav-button" onClick={()=>setNavItems(!navItems)}>
+             ☰
+            </div>
+    {/* <Outlet/> */}
     </div>
+    {/*  */}
         {/* <div className="sepration"></div> */}
     </>
   )
