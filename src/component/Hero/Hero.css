@@ -7,6 +7,26 @@
 .hero img{
     margin-top: 70px;
 }
+.circle-frame {
+    width: 300px; /* Set desired circular size */
+    height: 300px;
+    border-radius: 50%; /* Creates a circular frame */
+    overflow: hidden; /* Hides overflow */
+    position: relative;
+}
+
+.circle-image {
+    width: 100%; /* Ensures image fills the frame */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Keeps image from stretching */
+    position: absolute;
+    top: 40%; /* Adjusts vertical position */
+    left: 50%; /* Adjusts horizontal position */
+    transform: translate(-50%, -50%); /* Centers the image within the frame */
+}
+
+
+
 .hero h1{
     text-align: center;
     width: 70%;
