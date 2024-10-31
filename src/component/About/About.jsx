@@ -15,8 +15,10 @@ function About() {
         </div>
         <div className="about-right">
             <div className="about-para">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam aliquid iste natus aut eligendi! Animi deserunt repellendus veritatis adipisci ratione quibusdam nisi rerum voluptatem, fuga architecto exercitationem eius necessitatibus odit.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem ipsam voluptas magnam dolores nam ab placeat, exercitationem quas? Aut sequi unde beatae numquam id odit magni non tenetur explicabo inventore.</p>
+                <p>As a front-end web developer, I have expertise in HTML, CSS, JavaScript, and frameworks like React.js and Tailwind CSS. I'm currently expanding my backend knowledge at Suffah Education to build comprehensive web applications and stay updated with industry trends.
+                <p style={{marginTop:'15px'}}>I completed my second year in Commerce, focusing on Accounts, at S.M. College. This academic foundation has enhanced my analytical skills and attention to detail, which I find valuable in my career.</p>
+
+</p>
             </div>
             <div className="about-skills">
                 <div className="about-skill">
