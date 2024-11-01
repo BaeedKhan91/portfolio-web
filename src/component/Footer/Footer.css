@@ -39,6 +39,33 @@
     font-family: Outfit;
     font-size: 20px;
 }
+.footer {
+    position: relative; /* Ensure the arrows are positioned relative to this container */
+    padding: 35px 20px; /* Adjust padding as necessary */
+}
+
+.arrows {
+    position: absolute; /* Position absolutely within the about section */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Positioning the up arrow */
+.up-arrow {
+    top: 20px; /* 20px from the top */
+    right: 20px; /* 20px from the right */
+}
+
+/* Positioning the down arrow */
+.down-arrow {
+    bottom: 20px; /* 20px from the bottom */
+    left: 20px; /* 20px from the left */
+}
+
+/* Optional styling for hover effects */
+.arrows:hover {
+    color: #000000; /* Change color on hover */
+}
 .footer-subscribe{
     font-size: 20px;
     padding: 17px 45px;

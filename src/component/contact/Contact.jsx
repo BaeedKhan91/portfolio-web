@@ -1,7 +1,11 @@
 import React from 'react'
 import mail_icon from '../../assets/mail_icon.svg'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import location_icon from '../../assets/location_icon.svg'
 import call_icon from '../../assets/call_icon.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'; // Import down arrow icon
+
 import './Contact.css'
 function Contact() {
   return (
@@ -43,6 +47,11 @@ function Contact() {
             <button type='submit' className='contact-submit'> Submit Now</button>
         </form>
     </div>
+    <AnchorLink href='#work'>
+    <div className="arrows up-arrow">
+                <FontAwesomeIcon icon={faArrowUp} size="lg" />
+            </div>
+            </AnchorLink>
     </div>
   )
 }

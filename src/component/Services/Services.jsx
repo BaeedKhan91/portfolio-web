@@ -1,6 +1,10 @@
 import React from 'react'
 import Services_Data from '../../assets/services_data'
 import arrow_icon from '../../assets/arrow_icon.svg'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'; // Import down arrow icon
+
 import './Services.css'
 function Services() {
   return (
@@ -28,6 +32,16 @@ function Services() {
         </div>
     })}
     </div>
+    <AnchorLink href='#about'>
+    <div className="arrows up-arrow">
+                <FontAwesomeIcon icon={faArrowUp} size="lg" />
+            </div>
+            </AnchorLink>
+            <AnchorLink href='#work'>
+            <div className="arrows down-arrow">
+                <FontAwesomeIcon icon={faArrowDown} size="lg" />
+            </div>
+            </AnchorLink>
     </div>
   )
 }

@@ -1,6 +1,10 @@
 import React from 'react'
 import mywork_data from '../../assets/mywork_data'
 import arrow from './../../assets/arrow_icon.svg'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'; // Import down arrow icon
+
 import './Mywork.css'
 function Mywork() {
   return (
@@ -33,6 +37,16 @@ function Mywork() {
         <p>Show More</p>
         <img src={arrow} alt="" />
     </div>
+    <AnchorLink href='#services'>
+    <div className="arrows up-arrow">
+                <FontAwesomeIcon icon={faArrowUp} size="lg" />
+            </div>
+            </AnchorLink>
+            <AnchorLink href='#contact'>
+            <div className="arrows down-arrow">
+                <FontAwesomeIcon icon={faArrowDown} size="lg" />
+            </div>
+            </AnchorLink>
     </div>
   )
 }

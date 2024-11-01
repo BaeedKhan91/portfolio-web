@@ -61,6 +61,43 @@
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
 
 }
+.about {
+    position: relative; /* Ensure the arrows are positioned relative to this container */
+    padding: 30px 20px; /* Adjust padding as necessary */
+}
+
+.arrows {
+    position: absolute; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 7px;
+    color: white;
+}
+
+
+.up-arrow {
+    top: 20px; 
+    right: 20px; /* 20px from the right */
+}
+
+/* Positioning the down arrow */
+.down-arrow {
+    bottom: 20px; 
+    left: 20px; 
+}
+
+
+.arrows:hover {
+    color: #000000;
+
+
+}
+
+
+
+
 .about-skill:hover{
     transform: scale(1.05);
     transition: 0.3s;

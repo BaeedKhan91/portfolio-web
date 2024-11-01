@@ -1,6 +1,11 @@
 import React from 'react'
 import logo from '../../assets/main-logo.jpg'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'; // Import down arrow icon
+
 import user_icon from '../../assets/user_icon.svg'
+
 
 import './Footer.css'
 function Footer() {
@@ -26,6 +31,11 @@ function Footer() {
         <p className="footer-bottom-left">
         © 2024 Baeed Khan. All rights reserved.
         </p>
+        <AnchorLink href='#home'>
+    <div className="arrows up-arrow">
+                <FontAwesomeIcon icon={faArrowUp} size="lg" />
+            </div>
+            </AnchorLink>
         <div className="footer-bottom-right">
             <p>Term Of Services</p>
             <p>Privacy Policy</p>
