@@ -1,70 +1,79 @@
-import React, { useState } from 'react'
-import logo from '../../assets/main-logo.jpg'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import menu_open from '../../assets/menu_open.svg'
-import menu_close from '../../assets/menu_close.svg'
-import underline from '../../assets/nav_underline.svg'
-import './Navbar.css'
+import React, { useRef, useState } from 'react';
+import logo from '../../assets/main-logo.jpg';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import menu_open from '../../assets/menu_open.svg';
+import menu_close from '../../assets/menu_close.svg';
+import './Navbar.css';
+
 function Navbar() {
-  const [menu,setMenu] = useState('about')
-  return (
-    <div className='navbar'>
-        
-       
-        <img src={logo} alt="" width='109' height="57"  
-        
-            
-    />
-    <img src={menu_open} alt="" className='nav-mob-open' />
-        <ul className='nav-menu'>
-          <img src={menu_close} alt="" className="nav-mob-close" />
-            <li><AnchorLink className='anchor-link' href='#home'> <p onClick={()=>{setMenu('home')}}>Home</p></AnchorLink>{menu === 'home'?<hr style={{
-            height:'5px',
-            width:'70%',
-            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
-            border:'none',
-            borderRadius:'10px'
+    const menuRef = useRef(null);
+    const [menu, setMenu] = useState('home');
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // New state to track if menu is open
 
-        }}/>:<></>}</li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#about'> <p onClick={()=>{setMenu('about')}}>About Me</p></AnchorLink>{menu === 'about'?<hr style={{
-            height:'5px',
-            width:'70%',
-            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
-            border:'none',
-            borderRadius:'10px'
+    const openMenu = () => {
+        if (menuRef.current) {
+            menuRef.current.style.right = '0';
+        }
+        setIsMenuOpen(true); // Set menu as open
+    };
 
-        }}/>:<></>}</li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#services'> <p onClick={()=>{setMenu('services')}}>Services</p> </AnchorLink>{menu === 'services'?<hr style={{
-            height:'5px',
-            width:'70%',
-            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
-            border:'none',
-            borderRadius:'10px'
+    const closeMenu = () => {
+        if (menuRef.current) {
+            menuRef.current.style.right = '-350px';
+        }
+        setIsMenuOpen(false); // Set menu as closed
+    };
 
-        }}/>:<></>}</li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#work'> <p onClick={()=>{setMenu('work')}}>Portfolio</p> </AnchorLink>{menu === 'work'?<hr style={{
-            height:'5px',
-            width:'70%',
-            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
-            border:'none',
-            borderRadius:'10px'
+    return (
+        <div className='navbar'>
+            <img src={logo} alt="Logo" width='109' height="57" />
 
-        }}/>:<></>}
-            </li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#contact'>  <p onClick={()=>{setMenu('contact')}}>Contact</p> </AnchorLink>{menu === 'contact'?<hr style={{
-            height:'5px',
-            width:'70%',
-            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
-            border:'none',
-            borderRadius:'10px'
+            {/* Conditionally render menu open button */}
+            {!isMenuOpen && (
+                <img src={menu_open} alt="Open Menu" className='nav-mob-open' onClick={openMenu} />
+            )}
 
-        }}/>:<></>}</li>
-        </ul>
-        <AnchorLink className='anchor-link' offset={50} href='#contact'>  <div className="nav-connect">Connect With Me </div></AnchorLink>
+            <ul ref={menuRef} className='nav-menu'>
+                {/* Menu close button */}
+                <img src={menu_close} alt="Close Menu" className="nav-mob-close" onClick={closeMenu} />
+                
+                <li>
+                    <AnchorLink className='anchor-link' href='#home' onClick={() => setMenu('home')}>
+                        Home
+                    </AnchorLink>
+                    {menu === 'home' && <hr />}
+                </li>
+                <li>
+                    <AnchorLink className='anchor-link' href='#about' onClick={() => setMenu('about')}>
+                        About Me
+                    </AnchorLink>
+                    {menu === 'about' && <hr />}
+                </li>
+                <li>
+                    <AnchorLink className='anchor-link' href='#services' onClick={() => setMenu('services')}>
+                        Services
+                    </AnchorLink>
+                    {menu === 'services' && <hr />}
+                </li>
+                <li>
+                    <AnchorLink className='anchor-link' href='#work' onClick={() => setMenu('work')}>
+                        Portfolio
+                    </AnchorLink>
+                    {menu === 'work' && <hr />}
+                </li>
+                <li>
+                    <AnchorLink className='anchor-link' href='#contact' onClick={() => setMenu('contact')}>
+                        Contact
+                    </AnchorLink>
+                    {menu === 'contact' && <hr />}
+                </li>
+            </ul>
+
+            <AnchorLink className='anchor-link' href='#contact'>
+                <div className="nav-connect">Connect With Me</div>
+            </AnchorLink>
         </div>
-  )
+    );
 }
 
-export default Navbar
-
-// https://www.youtube.com/watch?v=hkHHwA-vEyQ&list=WL&index=4
+export default Navbar;

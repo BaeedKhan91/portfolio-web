@@ -19,14 +19,13 @@ function Mywork() {
     {mywork_data.map((work,index)=>{
         return <img className='pr-img' key={index} src={work.w_img} alt="" style={{
             width:'419px',
-            height:'280pxpx',
-            viewBox:"0 0 419 280", 
-            fill:"none",
-            objectFit:"cover",
+            height:'280px',
+            viewBox:'0 0 419 280',
+            fill:'none',
+            objectFit:'cover',
             objectPosition:"center",
             boxSizing:'border-box',
-            borderRadius:'10px',
-           
+            borderRadius:'10px'
         }}/>
     })}
     </div>
