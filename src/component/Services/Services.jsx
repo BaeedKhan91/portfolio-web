@@ -4,9 +4,16 @@ import arrow_icon from '../../assets/arrow_icon.svg'
 import './Services.css'
 function Services() {
   return (
-    <div className='services'>
+    <div id='services' className='services'>
     <div className="services-title">
-        <h1>MY Services</h1>
+        <h1>MY Services <hr style={{
+            height:'10px',
+            width:'50%',
+            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
+            border:'none',
+            borderRadius:'10px'
+
+        }}/></h1>
     </div>
     <div className="services-container">
     {Services_Data.map((service,index)=>{

@@ -76,4 +76,8 @@
 .hero-resume:hover{
     border:2px solid #B415FF;
 }
+.anchore-link{
+    text-decoration: none;
+    color: #fff;
+}
 

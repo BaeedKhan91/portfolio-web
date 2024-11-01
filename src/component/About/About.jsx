@@ -4,9 +4,16 @@ import profile from '../../assets/fiver.png'
 import './About.css'
 function About() {
   return (
-    <div className='about'>
+    <div id='about' className='about'>
     <div className="about-title">
-        <h1>About Me</h1>
+        <h1>About Me <hr style={{
+            height:'10px',
+            width:'50%',
+            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
+            border:'none',
+            borderRadius:'10px'
+
+        }}/></h1>
         {/* <img src={theme_pattern} alt="" /> */}
     </div>
     <div className="about-sections">

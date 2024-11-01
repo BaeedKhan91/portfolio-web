@@ -4,9 +4,16 @@ import arrow from './../../assets/arrow_icon.svg'
 import './Mywork.css'
 function Mywork() {
   return (
-    <div className='mywork'>
+    <div id='work' className='mywork'>
     <div className="mywork-title">
-        <h1>My Latest Work</h1>
+        <h1>My Latest Work <hr style={{
+            height:'10px',
+            width:'50%',
+            background: 'linear-gradient(270deg, #DF8908 10%, #B415FF 100%)',
+            border:'none',
+            borderRadius:'10px'
+
+        }}/></h1>
     </div>
     <div className="mywork-container">
     {mywork_data.map((work,index)=>{
